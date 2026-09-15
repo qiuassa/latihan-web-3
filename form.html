@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran — Latihan HTML Lanjutan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 { color: #2c3e50; }
+        form { background: #f9f9f9; padding: 20px; border-radius: 8px; }
+        label { display: block; margin-top: 12px; font-weight: bold; }
+        input, select, textarea {
+            width: 100%; padding: 8px; margin-top: 4px;
+            border: 1px solid #ccc; border-radius: 4px;
+            box-sizing: border-box;
+        }
+        fieldset {
+            border: 1px solid #ccc; border-radius: 8px;
+            padding: 12px; margin-top: 16px;
+        }
+        legend { font-weight: bold; padding: 0 8px; }
+        .radio-group label, .checkbox-group label {
+            display: inline; font-weight: normal;
+        }
+        button {
+            margin-top: 16px; padding: 10px 20px;
+            background: #2c3e50; color: white;
+            border: none; border-radius: 4px;
+            font-size: 16px; cursor: pointer;
+        }
+        button:hover { background: #34495e; }
+    </style>
+</head>
+<body>
+
+    <h1>Form Pendaftaran Akun</h1>
+    <p>Isi form berikut untuk mendaftar. Tanda <span style="color:red;">*</span> wajib diisi.</p>
+
+    <form action="#" method="post">
+
+        <!-- FIELDSET 1: Data Diri -->
+        <fieldset>
+            <legend>Data Diri</legend>
+
+            <label for="nama">Nama Lengkap <span style="color:red;">*</span></label>
+            <input type="text" id="nama" name="nama"
+                   placeholder="Masukkan nama lengkap"
+                   required>
+
+            <label for="email">Email <span style="color:red;">*</span></label>
+            <input type="email" id="email" name="email"
+                   placeholder="contoh@email.com"
+                   required>
+
+            <label for="password">Password <span style="color:red;">*</span></label>
+            <input type="password" id="password" name="password"
+                   placeholder="Minimal 8 karakter"
+                   minlength="8" required>
+
+            <label for="tanggal">Tanggal Lahir</label>
+            <input type="date" id="tanggal" name="tanggal">
+
+            <label for="jk">Jenis Kelamin <span style="color:red;">*</span></label>
+            <div class="radio-group">
+                <input type="radio" id="laki" name="jk" value="laki-laki" required>
+                <label for="laki">Laki-laki</label>
+
+                <input type="radio" id="perempuan" name="jk" value="perempuan">
+                <label for="perempuan">Perempuan</label>
+            </div>
+        </fieldset>
+
+        <!-- FIELDSET 2: Informasi Akademik -->
+        <fieldset>
+            <legend>Informasi Akademik</legend>
+
+            <label for="prodi">Program Studi <span style="color:red;">*</span></label>
+            <select id="prodi" name="prodi" required>
+                <option value="">-- Pilih Prodi --</option>
+                <option value="d3-informatika">D3 Informatika</option>
+                <option value="d3-multimedia">D3 Multimedia</option>
+                <option value="d3-akuntansi">D3 Akuntansi</option>
+                <option value="d3-administrasi">D3 Administrasi Bisnis</option>
+            </select>
+
+            <label for="angkatan">Angkatan</label>
+            <input type="number" id="angkatan" name="angkatan"
+                   min="2020" max="2030" placeholder="Contoh: 2026">
+
+            <label>Hobi / Minat (boleh pilih lebih dari 1):</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="hobi-web" name="hobi" value="web-design">
+                <label for="hobi-web">Desain Web</label><br>
+
+                <input type="checkbox" id="hobi-mobile" name="hobi" value="mobile-app">
+                <label for="hobi-mobile">Mobile App</label><br>
+
+                <input type="checkbox" id="hobi-ai" name="hobi" value="ai">
+                <label for="hobi-ai">AI / Machine Learning</label><br>
+
+                <input type="checkbox" id="hobi-network" name="hobi" value="networking">
+                <label for="hobi-network">Jaringan</label>
+            </div>
+        </fieldset>
+
+        <!-- FIELDSET 3: Pesan -->
+        <fieldset>
+            <legend>Catatan Tambahan</legend>
+
+            <label for="pesan">Tulis pesan / motivasi kamu:</label>
+            <textarea id="pesan" name="pesan" rows="5"
+                      placeholder="Tulis di sini..."></textarea>
+        </fieldset>
+
+        <!-- Tombol Submit -->
+        <button type="submit">Daftar Sekarang</button>
+
+    </form>
+
+</body>
+</html>

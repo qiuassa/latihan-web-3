@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Minggu 4 — Form, Tabel & Multimedia</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 8px; }
+        h2 { color: #34495e; margin-top: 40px; }
+        nav { background: #2c3e50; padding: 12px; border-radius: 8px; margin-bottom: 20px; }
+        nav a { color: white; text-decoration: none; margin: 0 12px; }
+        nav a:hover { text-decoration: underline; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; }
+        thead { background: #2c3e50; color: white; }
+        caption { font-weight: bold; margin-bottom: 8px; }
+        form { background: #f9f9f9; padding: 20px; border-radius: 8px; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ccc; border-radius: 4px; }
+        button { margin-top: 14px; padding: 10px 24px; background: #2c3e50; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #34495e; }
+        figure { margin: 20px 0; text-align: center; }
+        figcaption { font-style: italic; margin-top: 6px; color: #666; }
+        video { width: 100%; height: auto; }
+        footer { background: #2c3e50; color: white; text-align: center; padding: 12px; border-radius: 8px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER & NAV -->
+    <header>
+        <h1>Praktikum Minggu 4</h1>
+        <nav>
+            <a href="#form">Form</a>
+            <a href="#tabel">Tabel</a>
+            <a href="#multimedia">Multimedia</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- SECTION: FORM -->
+        <section id="form">
+            <h2>1. Form Pendaftaran</h2>
+            <!-- Salin isi form dari Bagian A, lengkap dengan fieldset -->
+            <form action="#" method="post">
+                <label for="p-nama">Nama Lengkap <span style="color:red;">*</span></label>
+                <input type="text" id="p-nama" name="nama" placeholder="Nama kamu" required>
+
+                <label for="p-email">Email <span style="color:red;">*</span></label>
+                <input type="email" id="p-email" name="email" placeholder="email@contoh.com" required>
+
+                <label for="p-prodi">Program Studi</label>
+                <select id="p-prodi" name="prodi">
+                    <option value="">-- Pilih --</option>
+                    <option value="d3-informatika">D3 Informatika</option>
+                    <option value="d3-multimedia">D3 Multimedia</option>
+                </select>
+
+                <label for="p-pesan">Pesan</label>
+                <textarea id="p-pesan" name="pesan" rows="4" placeholder="Tulis pesan..."></textarea>
+
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+
+        <!-- SECTION: TABEL -->
+        <section id="tabel">
+            <h2>2. Tabel Perbandingan</h2>
+            <table>
+                <caption>Perbandingan Framework CSS</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Fitur</th>
+                        <th scope="col">CSS Biasa</th>
+                        <th scope="col">Tailwind CSS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cara penulisan</td>
+                        <td>File terpisah (.css)</td>
+                        <td>Class inline di HTML</td>
+                    </tr>
+                    <tr>
+                        <td>Learning curve</td>
+                        <td>Rendah</td>
+                        <td>Sedang</td>
+                    </tr>
+                    <tr>
+                        <td>Ukuran file akhir</td>
+                        <td>Terkontrol manual</td>
+                        <td>Di-browse otomatis</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION: MULTIMEDIA -->
+        <section id="multimedia">
+            <h2>3. Multimedia</h2>
+
+            <figure>
+                <img src="https://placehold.co/600x300"
+                     alt="Contoh gambar placeholder untuk demonstrasi elemen img"
+                     width="600" height="300" loading="lazy">
+                <figcaption>Gambar 1 — Demonstrasi elemen &lt;img&gt; dengan &lt;figure&gt;</figcaption>
+            </figure>
+
+            <h3>Video</h3>
+            <video controls poster="https://placehold.co/640x360">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Browser kamu tidak mendukung elemen video.
+            </video>
+
+            <h3>Audio</h3>
+            <audio controls style="width:100%;">
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Browser kamu tidak mendukung elemen audio.
+            </audio>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 — Praktikum Minggu 4 | D3 Informatika</p>
+    </footer>
+
+</body>
+</html>
